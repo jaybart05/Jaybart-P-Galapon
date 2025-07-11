@@ -652,7 +652,7 @@ footer hr {
   width: 95%;
 }
 
-@media (min-width: 769px) and (max-width: 1700px) {
+@media (min-width: 769px) and (max-width: 1024px) {
   .main-header {
     padding: 1.25rem 3.75rem;
     justify-content: space-between;
