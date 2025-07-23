@@ -1,0 +1,443 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap');
+
+:root {
+  --primary-color: #4a4fcf;
+  --text-color: #000000;
+
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  user-select: none;
+}
+
+body {
+  font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--text-color);
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.J_Logo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  width: 50px;
+  filter: drop-shadow(0 2px 4px #0e0e0e4a);
+  margin: 10px;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: 500px auto auto auto auto;
+  grid-template-areas:
+    "item3 item3 item3 item2 item2"
+    "item3 item3 item3 item2 item2"
+    "item1 item1 item4 item4 item4"
+    "item1 item1 item4 item4 item4"
+  ;
+
+  .item1 {
+    grid-area: item1;
+    display: grid;
+    place-items: center;
+    place-content: start;
+    padding: 10px;
+    animation: slide-left 2s ease both;
+    animation-delay: 0.2s;
+    animation-fill-mode: both;
+
+    img {
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px #1e710066;
+      transition: .5s ease-in-out;
+
+      &:hover {
+        scale: 1.02;
+      }
+    }
+
+  }
+
+  .item2 {
+    grid-area: item2;
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    padding: 10px 30px;
+    animation: fadeInDown 2s ease both;
+    animation-delay: 0.2s;
+    animation-fill-mode: both;
+
+    .content {
+      h1 {
+        font-weight: 700;
+        font-size: 50px;
+        color: #1e7100;
+        text-shadow: 0 2px 5px #0e0e0e4a;
+      }
+
+      p {
+        font-size: medium;
+      }
+
+      .tech-stack {
+        margin-top: 30px;
+
+        h3 {
+          font-size: 20px;
+        }
+
+        .tech-icon {
+          margin-top: 5px;
+          margin-left: 20px;
+
+          img {
+            width: 60px;
+            aspect-ratio: 1/1;
+            object-fit: contain;
+            margin: 5px;
+            filter: drop-shadow(0 2px 4px #0e0e0e4a);
+          }
+        }
+      }
+    }
+  }
+
+  .item3 {
+    grid-area: item3;
+    padding: 10px;
+    display: grid;
+    place-items: center;
+    place-content: start;
+    animation: fadeInUp 2s ease both;
+    animation-delay: 0.2s;
+    animation-fill-mode: both;
+
+    video {
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px #1e710064;
+    }
+  }
+
+  .item4 {
+    grid-area: item4;
+    animation: slide-right 2s ease both;
+    animation-delay: 0.2s;
+    animation-fill-mode: both;
+    padding: 0 30px;
+
+    h1 {
+      font-size: 80px;
+      line-height: 90px;
+      font-weight: 900;
+      text-shadow: 0 2px 4px #0000007c;
+    }
+
+    h3 {
+      font-size: 40px;
+      font-weight: 400;
+    }
+
+    button {
+      margin-top: 10px;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.345);
+      background: var(--primary-color);
+
+      a {
+        text-decoration: none;
+        color: white;
+        font-size: 15px;
+      }
+    }
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1224px) {
+  .container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas:
+      "item3 item3 item3 item3"
+      "item2 item2 item2 item2"
+      "item1 item1 item1 item1"
+      "item4 item4 item4 item4"
+    ;
+
+    .item1 {
+      padding-top: 20px;
+      padding-left: 20px;
+      padding-right: 20px;
+      animation: fadeInUp 2s ease both;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    .item2 {
+      align-items: start;
+      justify-content: center;
+      padding: 50px 30px;
+      animation: fadeInUp 2s ease both;
+      animation-delay: 0.4s;
+
+      .content {
+        text-align: center;
+
+        .tech-stack {
+          margin-top: 40px;
+
+          .tech-icon {
+
+            img {
+              width: 80px;
+            }
+          }
+        }
+      }
+    }
+
+    .item3 {
+      padding-left: 20px;
+      padding-right: 20px;
+      animation: fadeInUp 2s ease both;
+      animation-delay: 0.6s;
+
+      video {
+        width: 100%;
+      }
+    }
+
+    .item4 {
+      animation: fadeInUp 2s ease both;
+      animation-delay: 0.8s;
+      padding: 5px;
+      text-align: center;
+      margin-bottom: 50px;
+
+      h1 {
+        font-size: 70px;
+      }
+
+      h3 {
+        font-size: 35px;
+      }
+
+      button {
+        margin-top: 10px;
+        padding: 10px 30px;
+        border: none;
+        border-radius: 5px;
+
+
+        a {
+          text-decoration: none;
+          color: white;
+          font-size: 18px;
+          font-weight: 400;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas:
+      "item2 item2"
+      "item3 item3"
+      "item1 item1"
+      "item4 item4"
+    ;
+
+    .item1 {
+      padding-left: 20px;
+      padding-right: 20px;
+      animation: fadeInUp 2s ease both;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    .item2 {
+      align-items: start;
+      justify-content: center;
+      padding: 10px 30px;
+      animation: fadeInUp 2s ease both;
+      animation-delay: 0.4s;
+
+      .content {
+        text-align: center;
+
+        h1 {
+          font-size: 30px;
+          line-height: 40px;
+          margin-bottom: 5px;
+        }
+
+        p {
+          font-size: 12px;
+        }
+
+        .tech-stack {
+          margin-top: 20px;
+          margin-left: 0;
+
+          .tech-icon {
+
+            img {
+              width: 50px;
+            }
+          }
+        }
+      }
+    }
+
+    .item3 {
+      padding-left: 20px;
+      padding-right: 20px;
+      animation: fadeInUp 2s ease both;
+      animation-delay: 0.6s;
+    }
+
+    .item4 {
+      animation: fadeInUp 2s ease both;
+      animation-delay: 0.8s;
+      padding: 5px;
+      text-align: center;
+      margin-bottom: 0px;
+
+      h1 {
+        font-size: 30px;
+        line-height: 30px;
+      }
+
+      h3 {
+        font-size: 14px;
+      }
+
+      button {
+        margin-top: 10px;
+        padding: 5px 10px;
+        border: none;
+        border-radius: 5px;
+        margin-bottom: 20px;
+
+        a {
+          text-decoration: none;
+          color: white;
+          font-size: 12px;
+          font-weight: 400;
+        }
+      }
+    }
+  }
+}
+
+// All Animations
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slide-left {
+  from {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-right {
+  from {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fading {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fallDown {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
